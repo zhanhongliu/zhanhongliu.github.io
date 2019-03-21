@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[qiime2安装教程（windows高效版）]]></title>
+    <url>%2F2019%2F03%2F21%2Fqiime2%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88windows%E9%AB%98%E6%95%88%E7%89%88%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[qiime2安装教程（windows高效版）1、前期准备miniconda安装包并且重命名为1.sh（下载地址：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda-1.6.2-Linux-x86_64.sh）cmder（完整版，下载地址百度咯，傻瓜式安装） 2、调试电脑在控制面板界面，依次操作：程序&gt;程序和功能&gt;启用或关闭windows功能&gt;适用于Linux的windows子系统（打钩）&gt;重启电脑]]></content>
+      <tags>
+        <tag>-教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[pages你好]]></title>
     <url>%2F2019%2F03%2F18%2Fpages%E4%BD%A0%E5%A5%BD%2F</url>
     <content type="text"><![CDATA[新的家非常高兴创建了这个pages主页，以后我会在上面更新我的文章。这个页面写的不是很好，但是我相信它会和我一起成长的！越来越好！]]></content>
