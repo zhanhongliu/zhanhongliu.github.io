@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  109
+                  673
                 </span>
               
 
@@ -390,8 +390,50 @@
       
         
           
-            <h1 id="qiime2安装教程（windows高效版）"><a href="#qiime2安装教程（windows高效版）" class="headerlink" title="qiime2安装教程（windows高效版）"></a>qiime2安装教程（windows高效版）</h1><h4 id="1、前期准备"><a href="#1、前期准备" class="headerlink" title="1、前期准备"></a>1、前期准备</h4><p>miniconda安装包并且重命名为1.sh<br>（下载地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda-1.6.2-Linux-x86_64.sh）" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda-1.6.2-Linux-x86_64.sh）</a><br>cmder（完整版，下载地址百度咯，傻瓜式安装）</p>
-<h4 id="2、调试电脑"><a href="#2、调试电脑" class="headerlink" title="2、调试电脑"></a>2、调试电脑</h4><p>在控制面板界面，依次操作：程序&gt;程序和功能&gt;启用或关闭windows功能&gt;适用于Linux的windows子系统（打钩）&gt;重启电脑<br><img src="/images/图片1.png" alt="图示"></p>
+            <h1 id="qiime2安装教程（windows高效版）"><a href="#qiime2安装教程（windows高效版）" class="headerlink" title="qiime2安装教程（windows高效版）"></a>qiime2安装教程（windows高效版）</h1><h4 id="1、前期准备"><a href="#1、前期准备" class="headerlink" title="1、前期准备"></a>1、前期准备</h4><p>miniconda安装包并且重命名为1.sh<br>（下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda-1.6.2-Linux-x86_64.sh）" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda-1.6.2-Linux-x86_64.sh）</a><br>cmder（下载地址：<a href="https://cmder.net/，mini版和完整版任选一个即可，建议安装到D盘）" target="_blank" rel="noopener">https://cmder.net/，mini版和完整版任选一个即可，建议安装到D盘）</a></p>
+<h4 id="2、调试电脑"><a href="#2、调试电脑" class="headerlink" title="2、调试电脑"></a>2、调试电脑</h4><p>在控制面板界面，依次操作：程序&gt;程序和功能&gt;启用或关闭windows功能&gt;适用于Linux的windows子系统（打钩）&gt;重启电脑<br>注意：普通家庭版系统可能需要提前打开开发者模式，百度下就可以，很简单的。<br><img src="/images/图片1.png" alt="图示1"></p>
+<h4 id="3、安装ubuntu子系统"><a href="#3、安装ubuntu子系统" class="headerlink" title="3、安装ubuntu子系统"></a>3、安装ubuntu子系统</h4><p>科普：这里的乌班图子系统并不是真正的linux系统，只是依赖于windows系统的一个极为精简的乌班图系统。虽然不完全，但是足够我们使用qiime2软件。虽然适用于qiime2，但不保证适用于其他软件，但目前可忽略。<br>打卡“windows store”也就是windows应用商店，搜索ubuntu，下载ubuntu18（TLS）版。<br><img src="/images/图片2.png" alt="图示2"><br>下载完成后，点击启动，自动安装<br>安装完成后会提示输入新的用户名和密码<br>（用户名用英文，密码输6个你记得住的简单数字就好，注意在linux系统中输入的密码是不会显示的，但是只要你输入了，它就会存在的。）<br><img src="/images/图片3.png" alt="图示3"><br>关闭安装界面，并打开cmder，输入</p>
+<blockquote>
+<p>bash</p>
+</blockquote>
+<p>如果出现</p>
+<blockquote>
+<p>(bash)<strong><em>**</em></strong>@<strong>***</strong>$</p>
+</blockquote>
+<p>就说明安装成功了。<br><img src="/images/图片4.png" alt="图示4"><br>（此时cmder不要关闭，如果不小心关闭了，就再打开cmder，并输入bush）</p>
+<h4 id="4、安装miniconda"><a href="#4、安装miniconda" class="headerlink" title="4、安装miniconda"></a>4、安装miniconda</h4><p>把1.sh放到D盘里（放到根目录，就是直接放在D盘，不要放在D盘的文件夹里）<br>在cmder中输入如下命令，安装miniconda</p>
+<blockquote>
+<p>cd /mnt/d</p>
+</blockquote>
+<blockquote>
+<p>bash 1.sh</p>
+</blockquote>
+<p>然后按住enter，进度条一路向下走，直到出现选yes/no时，手动输入yes，按enter，再enter，，等待至安装完成（约3min），最后再选一个填yes，即可完成。</p>
+<h4 id="5、更换conda源"><a href="#5、更换conda源" class="headerlink" title="5、更换conda源"></a>5、更换conda源</h4><p>ubuntu的默认conda源在国外，如果进行后续操作，相关下载速度会非常慢！<br>在cmder中输入如下命令：</p>
+<blockquote>
+<p>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a></p>
+</blockquote>
+<blockquote>
+<p>conda config –set show_channel_urls yes</p>
+</blockquote>
+<h4 id="6、更换安装文件夹"><a href="#6、更换安装文件夹" class="headerlink" title="6、更换安装文件夹"></a>6、更换安装文件夹</h4><p>在D盘新建一个名叫qiime2的文件夹</p>
+<p>再输入命令：</p>
+<blockquote>
+<p>cd /mnt/d/qiime2</p>
+</blockquote>
+<h4 id="7、安装qiime2-输入每条命令并等待完成后再输入下一条"><a href="#7、安装qiime2-输入每条命令并等待完成后再输入下一条" class="headerlink" title="7、安装qiime2(输入每条命令并等待完成后再输入下一条)"></a>7、安装qiime2(输入每条命令并等待完成后再输入下一条)</h4><p>第一条命令：</p>
+<blockquote>
+<p>wget <a href="https://data.qiime2.org/distro/core/qiime2-2019.1-py36-linux-conda.yml" target="_blank" rel="noopener">https://data.qiime2.org/distro/core/qiime2-2019.1-py36-linux-conda.yml</a></p>
+</blockquote>
+<p>第二条命令：</p>
+<blockquote>
+<p>conda env create -n qiime2-2019.1 –file qiime2-2019.1-py36-linux-conda.yml</p>
+</blockquote>
+<p>第三条命令：</p>
+<blockquote>
+<p>rm qiime2-2019.1-py36-linux-conda.yml</p>
+</blockquote>
+<h4 id="8、完"><a href="#8、完" class="headerlink" title="8、完"></a>8、完</h4><p>然后你就可以愉快的使用它啦！</p>
 
           
         
